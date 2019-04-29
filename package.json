@@ -13,7 +13,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "eslint": "npx eslint src/"
+    "eslint": "npx eslint src/",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,json}\""
   },
   "eslintConfig": {
     "extends": "react-app"
