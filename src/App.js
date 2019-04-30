@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const { name, surname, age } = this.props.user;
+    const { user, page } = this.props;
 
     return (
       <div className="App">
@@ -12,10 +12,11 @@ class App extends Component {
           <h1 className="App-title">Мой топ фотографий</h1>
         </header>
         <p className="App-intro">Здесь будут самые залайканные фотографии</p>
+        <p>Привет, {user.name}</p>
         <p>
-          Меня зовут: {name} {surname}
+          У тебя {page.photos ? page.photos.length : '?'} за{' '}
+          {page.year ? page.year : '?'} год
         </p>
-        <p>Мне {age} лет</p>
       </div>
     );
   }
@@ -25,6 +26,7 @@ const mapStateToProps = store => {
   console.log(store);
   return {
     user: store.user,
+    page: store.page,
   };
 };
 
