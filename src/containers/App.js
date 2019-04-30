@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import User from '../components/User';
+import Page from '../components/Page';
 import './App.css';
 
 class App extends Component {
@@ -12,11 +14,8 @@ class App extends Component {
           <h1 className="App-title">Мой топ фотографий</h1>
         </header>
         <p className="App-intro">Здесь будут самые залайканные фотографии</p>
-        <p>Привет, {user.name}</p>
-        <p>
-          У тебя {page.photos ? page.photos.length : '?'} фотографий за{' '}
-          {page.year ? page.year : '?'} год
-        </p>
+        <User name={user.name} />
+        <Page year={page.year} photos={page.photos} />
       </div>
     );
   }
