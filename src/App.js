@@ -14,7 +14,7 @@ class App extends Component {
         <p className="App-intro">Здесь будут самые залайканные фотографии</p>
         <p>Привет, {user.name}</p>
         <p>
-          У тебя {page.photos ? page.photos.length : '?'} за{' '}
+          У тебя {page.photos ? page.photos.length : '?'} фотографий за{' '}
           {page.year ? page.year : '?'} год
         </p>
       </div>
